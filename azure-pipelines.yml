@@ -33,4 +33,3 @@ jobs:
     name:  Barn
     resourceType: VirtualMachine
     tags: web1
-  strategy:
