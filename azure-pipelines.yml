@@ -26,4 +26,12 @@ steps:
     summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
     reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
     failIfCoverageEmpty: true
-
+    
+jobs:  
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  VMenv
+    resourceType: VirtualMachine
+    tags: web1
+  strategy: runOnce
